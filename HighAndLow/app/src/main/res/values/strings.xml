@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HighAndLow</string>
+    <string name="hit_text">あたり</string>
+    <string name="lose_text">はずれ</string>
+</resources>
