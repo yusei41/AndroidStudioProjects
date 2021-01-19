@@ -5,26 +5,33 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.ListAdapter
 import android.widget.ListView
 
+/*
+    リストビューを使う際には必ずAdapterを使わなければいけません。
+    手順１ -> リストデータを用意する
+    手順２ -> 用意したリストデータを元にアダプタオブジェクトを生成
+    手順３ -> ListViewにアダプタオブジェクトをセットする
+ */
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //ListViewオブジェクトを取得
+        //ListViewオブジェクトを取得　＊手順１
         val lvMenu = findViewById<ListView>(R.id.lvMenu)
 
-        //リストビューに表示するリストデータを作成
+        //リストビューに表示するリストデータを作成（）
         var menuList = mutableListOf("唐揚げ定食", "ハンバーグ定食", "生姜焼き定食", "ステーキ定食"
                                         , "野菜炒め定食", "とんかつ定食", "メンチカツ定食", "チキンカツ定食", "コロッケ定食"
                                         , "焼き魚定食", "焼肉定食" )
 
-        //アダプタオブジェクトを生成
+        //アダプタオブジェクトを生成　＊手順２
         val adapter = ArrayAdapter(applicationContext, android.R.layout.simple_list_item_1, menuList)
 
-        //リストビューにアダプタオブジェクトを設定
+        //リストビューにアダプタオブジェクトを設定　＊手順３
         lvMenu.adapter = adapter
 
         //リストビューにリスナを設定
