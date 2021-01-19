@@ -1,4 +1,0 @@
-#Tue Jan 19 16:31:49 JST 2021
-base.0=/Users/yuseitoriya/AndroidStudioProjects/ListViewSample2/app/build/intermediates/transforms/dexMerger/debug/10
-path.0=classes.dex
-renamed.0=classes.dex
